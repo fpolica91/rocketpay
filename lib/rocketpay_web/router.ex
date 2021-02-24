@@ -9,6 +9,7 @@ defmodule RocketpayWeb.Router do
     pipe_through :api
     # this controller is defined in controllers, under rocketpay_web
     get "/:filename", WelcomeController, :index
+    post "/users", UsersController, :create
   end
 
   # Enables LiveDashboard only for development
