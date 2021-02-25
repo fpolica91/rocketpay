@@ -5,7 +5,9 @@ defmodule Rocketpay.Repo.Migrations.CreateAccountsTable do
     create table :accounts do
       # decimal is specifically for dealing with monetary values
       add :balance, :decimal
-      add :user_id, references(:type, type: :binary_id)
+      # references table of reference, type of column in table
+      # user id is type binary
+      add :user_id, references(:users, type: :binary_id)
 
       timestamps()
     end
