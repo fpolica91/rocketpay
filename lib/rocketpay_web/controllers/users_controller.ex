@@ -3,7 +3,7 @@ defmodule RocketpayWeb.UsersController do
   use RocketpayWeb, :controller
   alias Rocketpay.User
   # with this action_fallback, the error is handled by that controller
-  action_fallback RocketpayWeb.FallbackController
+  # action_fallback RocketpayWeb.FallbackController
 
   def create(connection, params) do
     # this is called pattern matching, if the response is :ok with a user then do whats below
